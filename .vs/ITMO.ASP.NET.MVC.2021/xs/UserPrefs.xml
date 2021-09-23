@@ -1,0 +1,32 @@
+﻿<Properties StartupConfiguration="{AD6595DB-4C1E-49A7-9EFB-57B2D6BB560B}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="MVC_Lab01/Models/ModelClass.cs">
+    <Files>
+      <File FileName="MVC_Lab01/Controllers/HomeController.cs" Line="20" Column="10" />
+      <File FileName="MVC_Lab01/Startup.cs" Line="58" Column="1" />
+      <File FileName="MVC_Lab01/Models/ModelClass.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="ITMO.ASP.NET.MVC.2021" expanded="True">
+            <Node name="MVC_Lab01" expanded="True">
+              <Node name="Controllers" expanded="True" />
+              <Node name="Models" expanded="True">
+                <Node name="ModelClass.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.MVC__Lab01 PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/mikhail.smirnov/Projects/ITMO.ASP.NET.MVC.2021/MVC_Lab01/Controllers/ITMOController.cs" relfile="MVC_Lab01/Controllers/ITMOController.cs" line="19" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
