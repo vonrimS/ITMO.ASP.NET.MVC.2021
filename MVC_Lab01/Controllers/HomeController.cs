@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -31,7 +32,19 @@ namespace MVC_Lab01.Controllers
             //string res = StudyCsharp.GetFunction(0, 9);
 
 
-            string res = ExeFactorial(5);
+            //string res = ExeFactorial(5);
+
+            Triangle triangle1 = new Triangle(3, 5, 6);
+
+            //string res = ExeTriangle(triangle1);
+
+            Circle circle = new Circle(3);
+
+            //string res = ExeCircle(circle);
+
+            //string res = ExePoli();
+
+            string res = ExeCollection();
 
             return res;
         }
@@ -66,7 +79,7 @@ namespace MVC_Lab01.Controllers
         }
 
 
-        public string ExeFactorial (int x)
+        public string ExeFactorial(int x)
         {
             int f;
             bool ok = StudyCsharp.Factorial(x, out f);
@@ -76,6 +89,58 @@ namespace MVC_Lab01.Controllers
             else
                 return "Невозможно вычислить факториал";
         }
+
+
+        public string ExeTriangle(Triangle triangle) => $"Площадь фигуры {triangle.Name} равна: {triangle.Area}";
+
+        public string ExeCircle(Circle circle) => $"Площадь фигуры {circle.Name} равна: {circle.Area:0.##}";
+
+
+        public string ExePoli()
+        {
+            StringBuilder str = new StringBuilder();
+
+            Shape[] shapes =
+            {
+                new Triangle (1,2,3),
+                new Circle(5),
+                new Triangle(5,2,88)
+            };
+
+            foreach(Shape sh in shapes)
+            {
+                str.AppendFormat("Это фигура {0}", sh.Name + "\n");
+            }
+
+            return str.ToString();
+
+        }
+
+
+        public string ExeCollection()
+        {
+            List<Circle> cirs = new List<Circle>
+            {
+                new Circle(12),
+                new Circle(5),
+                new Circle(3),
+                new Circle(11)
+            };
+
+            cirs.Add(new Circle(31));
+            cirs.Sort();
+
+            StringBuilder str = new StringBuilder();
+            foreach (Shape item in cirs)
+            {
+                str.AppendFormat("Это фигура {0}", item.Name + "\n");
+            }
+
+            return str.ToString();
+        }
+
+        //Triangle triangle = new Triangle(3, 5, 6);
+
 
 
         //private readonly ILogger<HomeController> _logger;
