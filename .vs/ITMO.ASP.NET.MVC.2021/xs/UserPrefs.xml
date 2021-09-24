@@ -1,9 +1,11 @@
 ﻿<Properties StartupConfiguration="{AD6595DB-4C1E-49A7-9EFB-57B2D6BB560B}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="MVC_Lab01/Models/ModelClass.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="MVC_Lab01/Models/StudyCsharp.cs">
     <Files>
-      <File FileName="MVC_Lab01/Controllers/HomeController.cs" Line="20" Column="10" />
+      <File FileName="MVC_Lab01/Controllers/HomeController.cs" Line="29" Column="12" />
       <File FileName="MVC_Lab01/Startup.cs" Line="58" Column="1" />
-      <File FileName="MVC_Lab01/Models/ModelClass.cs" Line="1" Column="1" />
+      <File FileName="MVC_Lab01/Models/ModelClass.cs" Line="14" Column="1" />
+      <File FileName="MVC_Lab01/Controllers/ITMOController.cs" Line="19" Column="33" />
+      <File FileName="MVC_Lab01/Models/StudyCsharp.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -12,8 +14,9 @@
             <Node name="MVC_Lab01" expanded="True">
               <Node name="Controllers" expanded="True" />
               <Node name="Models" expanded="True">
-                <Node name="ModelClass.cs" selected="True" />
+                <Node name="StudyCsharp.cs" selected="True" />
               </Node>
+              <Node name="Views" expanded="True" />
             </Node>
           </Node>
         </State>
@@ -25,7 +28,7 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
-      <Breakpoint file="/Users/mikhail.smirnov/Projects/ITMO.ASP.NET.MVC.2021/MVC_Lab01/Controllers/ITMOController.cs" relfile="MVC_Lab01/Controllers/ITMOController.cs" line="19" column="1" />
+      <Breakpoint file="/Users/mikhail.smirnov/Projects/ITMO.ASP.NET.MVC.2021/MVC_Lab01/Controllers/ITMOController.cs" relfile="MVC_Lab01/Controllers/ITMOController.cs" line="24" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
