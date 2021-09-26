@@ -4,27 +4,55 @@
 
 @model MVC_Lab01.Models.Person
 
+@{
+
+    //ViewBag.Title = "Главная";
+    ViewData["Title"] = "InputData";
+    Layout = "~/Views/_BasicLayout.cshtml";
+}
+
 <div>
-    <form method ="post">
+    @using (Html.BeginForm())
+    {
         <table>
             <tr>
-                <td>
-                    <p>Введите имя :</p>
-                </td>
-                <td>
-                    <input type ="text" name="FirstName" />
-                </td>
+                <td><p>Введите имя:</p></td>
+                @*<td>@Html.TextBox("FirstName")</td>*@
+                <td>@Html.TextBoxFor(x => x.FirstName)</td>
             </tr>
             <tr>
-                <td>
-                    <p>Введите фамилию: </p></td>
-                <td><input type ="text" name="LastName" /></td>
+                <td><p>Введите фамилию:</p></td>
+                <td>@Html.TextBoxFor(x => x.LastName)</td>
             </tr>
             <tr>
-                <td>
-                    <input type ="submit" value="Отправить" />
-                </td>
-                <td> </td></tr>
+                <td><input type="submit" value="Отправить" /></td>
+                <td></td>
+            </tr>
         </table>
-    </form>
+    }
 </div>
+
+@*<div>
+        <form method ="post">
+            <table>
+                <tr>
+                    <td>
+                        <p>Введите имя :</p>
+                    </td>
+                    <td>
+                        <input type ="text" name="FirstName" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Введите фамилию: </p></td>
+                    <td><input type ="text" name="LastName" /></td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type ="submit" value="Отправить" />
+                    </td>
+                    <td> </td></tr>
+            </table>
+        </form>
+    </div>*@

@@ -1,0 +1,31 @@
+﻿h1 {
+    margin: 0px;
+    padding: 2px 0;
+    font-size: 30px;
+    font-weight: bold;
+    background-color: green;
+}
+
+body {
+    font-family: "Trebuchet MS", Verdana, Helvetica, sans-serif;
+    padding: 20px;
+    border: solid medium red;
+    font-size: 15px;
+    
+}
+
+input {
+    margin-top: 15px;
+    padding: 5px;
+    width: 100%;
+    font-size: 35px;
+}
+
+
+div {
+    margin: 20px;
+    background-color: yellow;
+}
+a{
+font-size: 30px;
+}
