@@ -1,0 +1,10 @@
+﻿@model MVC_Lab01.Models.Person
+
+@{
+    Layout = null;
+}
+
+<div>
+    <h1>Здравствуйте, @Model.ToString()! </h1>
+    <p>@Html.ActionLink("На главную", "Index")</p>
+</div>

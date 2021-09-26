@@ -1,0 +1,18 @@
+﻿@model IEnumerable<MVC_Lab01.Models.PersonRepository>
+
+@{
+    Layout = null;
+}
+
+<div>
+    <h3>Список участников</h3>
+    <p>Персон всего @ViewBag.Count</p>
+    <ul>
+        @foreach (var c in ViewBag.Pers)
+        {
+            <li>@c.ToString()</li>
+        }
+
+    </ul>
+    <p>@Html.ActionLink("На главную", "Index")</p>
+</div>

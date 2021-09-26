@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "/Users/mikhail.smirnov/Projects/ITMO.ASP.NET.MVC.2021/MVC_Lab01/MVC_Lab01.csproj": {}
+    "C:\\Users\\Profile\\source\\repos\\ITMO.ASP.NET.MVC.2021\\MVC_Lab01\\MVC_Lab01.csproj": {}
   },
   "projects": {
-    "/Users/mikhail.smirnov/Projects/ITMO.ASP.NET.MVC.2021/MVC_Lab01/MVC_Lab01.csproj": {
+    "C:\\Users\\Profile\\source\\repos\\ITMO.ASP.NET.MVC.2021\\MVC_Lab01\\MVC_Lab01.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/mikhail.smirnov/Projects/ITMO.ASP.NET.MVC.2021/MVC_Lab01/MVC_Lab01.csproj",
+        "projectUniqueName": "C:\\Users\\Profile\\source\\repos\\ITMO.ASP.NET.MVC.2021\\MVC_Lab01\\MVC_Lab01.csproj",
         "projectName": "MVC_Lab01",
-        "projectPath": "/Users/mikhail.smirnov/Projects/ITMO.ASP.NET.MVC.2021/MVC_Lab01/MVC_Lab01.csproj",
-        "packagesPath": "/Users/mikhail.smirnov/.nuget/packages/",
-        "outputPath": "/Users/mikhail.smirnov/Projects/ITMO.ASP.NET.MVC.2021/MVC_Lab01/obj/",
+        "projectPath": "C:\\Users\\Profile\\source\\repos\\ITMO.ASP.NET.MVC.2021\\MVC_Lab01\\MVC_Lab01.csproj",
+        "packagesPath": "C:\\Users\\Profile\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Profile\\source\\repos\\ITMO.ASP.NET.MVC.2021\\MVC_Lab01\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/mikhail.smirnov/.config/NuGet/NuGet.Config"
+          "C:\\Users\\Profile\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -37,6 +39,12 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[5.0.2, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -55,7 +63,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.401/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -12,42 +12,56 @@ namespace MVC_Lab01.Controllers
 {
     public class HomeController : Controller
     {
+        private static PersonRepository db = new PersonRepository();
 
-        public string Index(string hel)
-        {
+        //public string Index(string hel)
+        //{
 
-            //string Greeting = ModelClass.ModelHello() + ", " + hel;
-            //return Greeting;
-
-
-            //string res = ExeEnum();
-            //return res;
-
-            //string res = ExeStruct();
-
-            //string res = StudyCsharp.SetStatus(3);
-
-            //string res = StudyCsharp.ExeSwitch(StudyCsharp.SetStatus(3));
-
-            //string res = StudyCsharp.GetFunction(0, 9);
+        //    //string Greeting = ModelClass.ModelHello() + ", " + hel;
+        //    //return Greeting;
 
 
-            //string res = ExeFactorial(5);
+        //    //string res = ExeEnum();
+        //    //return res;
 
-            Triangle triangle1 = new Triangle(3, 5, 6);
+        //    //string res = ExeStruct();
 
-            //string res = ExeTriangle(triangle1);
+        //    //string res = StudyCsharp.SetStatus(3);
 
-            Circle circle = new Circle(3);
+        //    //string res = StudyCsharp.ExeSwitch(StudyCsharp.SetStatus(3));
 
-            //string res = ExeCircle(circle);
+        //    //string res = StudyCsharp.GetFunction(0, 9);
 
-            //string res = ExePoli();
 
-            string res = ExeCollection();
+        //    //string res = ExeFactorial(5);
 
-            return res;
+        //    //Triangle triangle1 = new Triangle(3, 5, 6);
+
+        //    //string res = ExeTriangle(triangle1);
+
+        //    //Circle circle = new Circle(3);
+
+        //    //string res = ExeCircle(circle);
+
+        //    //string res = ExePoli();
+
+        //    string res = ExeCollection();
+
+        //    return res;
+        //}
+
+        [HttpGet]
+        public ViewResult InputData() { 
+            return View(); 
         }
+
+        [HttpPost]
+        public ViewResult InputData(Person p)
+        {
+            db.AddPerson(p);
+            return View("Hello",  p);
+        }
+
 
         public string ExeEnum()
         {
@@ -150,10 +164,20 @@ namespace MVC_Lab01.Controllers
         //    _logger = logger;
         //}
 
-        //public IActionResult Index()
-        //{
-        //    return View();
-        //}
+        public ViewResult Index()
+        {
+            int hour = DateTime.Now.Hour; 
+            ViewBag.Greeting = hour < 12 ? "Доброе утро" : "Добрый день"; 
+            ViewData["Mes"] = "хорошего настроения"; 
+            return View();
+        }
+
+        public ViewResult OutputData()
+        {
+            ViewBag.Pers = db.GetAllPersons;
+            ViewBag.Count = db.NumOfPerson;
+            return View("ListPerson");
+        }
 
         //public IActionResult Privacy()
         //{
