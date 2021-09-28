@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.Owin;
 using MvcCreditApp001.Models;
 
 namespace MvcCreditApp001.Controllers
@@ -24,7 +26,7 @@ namespace MvcCreditApp001.Controllers
             if (allBids.Count == 0)
             {
                 return Content("Указанный кредит " + name + " не найден");
-            }
+            } 
             return PartialView(allBids);
         }
 
@@ -34,6 +36,7 @@ namespace MvcCreditApp001.Controllers
             ViewBag.Credits = allCredits; 
         }
 
+        [Authorize]
         [HttpGet] 
         public ActionResult CreateBid() 
         {
@@ -57,6 +60,13 @@ namespace MvcCreditApp001.Controllers
             public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
+
+            IList<string> roles = new List<string> { "Роль не определена" };
+            ApplicationUserManager userManager = HttpContext.GetOwinContext().GetUserManager<ApplicationUserManager>();
+            ApplicationUser user = userManager.FindByEmail(User.Identity.Name);
+            if (user != null)
+                roles = userManager.GetRoles(user.Id);
+            ViewBag.rol = roles;
 
             return View();
         }

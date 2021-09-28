@@ -20,6 +20,8 @@ namespace MvcCreditApp001
             BundleConfig.RegisterBundles(BundleTable.Bundles);
 
             Database.SetInitializer(new CreditsDbInitializer());
+
+            Database.SetInitializer<ApplicationDbContext>(new AppDbInitializer());
         }
     }
 }
